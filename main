@@ -10,8 +10,7 @@ public class main {
 		Scanner sc = new Scanner(System.in);
 
 		int opcao = 6;
-		int num1, num2, conta;
-		double num3, num4, conta2;
+		double num1, num2, conta;
 
 		Calculadora c = new Calculadora();
 
@@ -22,14 +21,15 @@ public class main {
 		System.out.println("4. Divisão");
 		System.out.println("5. Poteciação");
 		System.out.println("6. Raiz quadrada");
+		System.out.println("7. Porcentagem");
 		System.out.print("Digite o número da operação escolhida: ");
 		opcao = sc.nextInt();
 
 		if (opcao == 1) {
 			System.out.print("\n---SOMA---" + "\nDigite o primeiro número: ");
-			num1 = sc.nextInt();
+			num1 = sc.nextDouble();
 			System.out.print("Digite o segundo número: ");
-			num2 = sc.nextInt();
+			num2 = sc.nextDouble();
 
 			conta = c.soma(num1, num2);
 
@@ -37,9 +37,9 @@ public class main {
 
 		} else if (opcao == 2) {
 			System.out.print("\n---SUBTRAÇÃO---" + "\nDigite o primeiro número: ");
-			num1 = sc.nextInt();
+			num1 = sc.nextDouble();
 			System.out.print("Digite o segundo número: ");
-			num2 = sc.nextInt();
+			num2 = sc.nextDouble();
 
 			conta = c.subtracao(num1, num2);
 
@@ -47,9 +47,9 @@ public class main {
 
 		} else if (opcao == 3) {
 			System.out.print("\n---MULTIPLICAÇÃO---" + "\nDigite o primeiro número: ");
-			num1 = sc.nextInt();
+			num1 = sc.nextDouble();
 			System.out.print("Digite o segundo número: ");
-			num2 = sc.nextInt();
+			num2 = sc.nextDouble();
 
 			conta = c.multiplicacao(num1, num2);
 
@@ -57,31 +57,40 @@ public class main {
 
 		} else if (opcao == 4) {
 			System.out.print("\n---DIVISÃO---" + "\nDigite o primeiro número: ");
-			num3 = sc.nextDouble();
+			num1 = sc.nextDouble();
 			System.out.print("Digite o segundo número: ");
-			num4 = sc.nextDouble();
+			num2 = sc.nextDouble();
 
-			conta2 = c.divisao(num3, num4);
+			conta = c.divisao(num1, num2);
 
-			System.out.println("\n" + num3 + " ÷ " + num4 + " = " + conta2);
+			System.out.println("\n" + num1 + " ÷ " + num2 + " = " + conta);
 
 		} else if (opcao == 5) {
 			System.out.print("\n---POTENCIAÇÃO---" + "\nDigite o número da base: ");
-			num1 = sc.nextInt();
+			num1 = sc.nextDouble();
 			System.out.print("Digite o número do expoente: ");
-			num2 = sc.nextInt();
+			num2 = sc.nextDouble();
 
 			conta = c.potenciacao(num1, num2);
 
 			System.out.println("\nPotência de " + num1 + " elevado a " + num2 + " = " + conta);
 
 		} else if (opcao == 6) {
-			System.out.print("\n---Raiz quadrada---" + "\nDigite o número desejado: ");
-			num3 = sc.nextDouble();
+			System.out.print("\n---RAIZ QUADRADA---" + "\nDigite o número desejado: ");
+			num1 = sc.nextDouble();
 
-			conta2 = c.raizQuad(num3);
+			conta = c.raizQuad(num1);
 
-			System.out.println("\nO valor da raiz quadrada de " + num3 + " = " + conta2);
+			System.out.println("O valor da raiz quadrada de " + num1 + " = " + conta);
+		} else if (opcao == 7) {
+			System.out.print("\n---PORCENTAGEM---" + "\nDigite o número que você deseja saber a porcentagem: ");
+			num1 = sc.nextDouble();
+			System.out.print("Digite quantos porcentos você deseja: ");
+			num2 = sc.nextDouble();
+
+			conta = c.porcentagem(num1, num2);
+
+			System.out.println("\n" + num2 + "% de " + num1 + " = " + conta);
 		}
 	}
 }
