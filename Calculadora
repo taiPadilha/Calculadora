@@ -1,0 +1,29 @@
+package entidade;
+
+public class Calculadora {
+
+	public int soma(int num1, int num2) {
+		return num1 + num2;
+	}
+
+	public int subtracao(int num1, int num2) {
+		return num1 - num2;
+	}
+
+	public double divisao(double num1, double num2) {
+		return num1 / num2;
+	}
+
+	public int multiplicacao(int num1, int num2) {
+		return num1 * num2;
+	}
+
+	public int potenciacao(int num1, int num2) {
+		return (int) Math.pow(num1, num2);
+	}
+
+	public double raizQuad(double num1) {
+		return (double) Math.sqrt(num1);
+	}
+
+}
